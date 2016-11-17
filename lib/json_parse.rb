@@ -1,4 +1,5 @@
 #Responsible for parsing passed in JSON file
+require 'json'
 
 class Json_parse
 
