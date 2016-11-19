@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-require 'rspec'
-require 'json'
+gem 'rspec'
+gem 'json'
+gem 'timecop'
