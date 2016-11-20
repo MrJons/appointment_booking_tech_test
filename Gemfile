@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem 'rspec'
-gem 'rake'
 gem 'json'
-gem 'coveralls', require: false
+
+group :test do
+  gem 'rspec'
+  gem 'rake'
+  gem 'coveralls', require: false
+end

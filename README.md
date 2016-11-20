@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/MrJons/babylon_health_tech_test.svg?branch=master)](https://travis-ci.org/MrJons/babylon_health_tech_test)
 [![Coverage Status](https://coveralls.io/repos/github/MrJons/babylon_health_tech_test/badge.svg?branch=master)](https://coveralls.io/github/MrJons/babylon_health_tech_test)
 
-##### To run program:
+##### To run program
 - Navigate to root of program directory.
 - run bundle
 - uncomment code at bottom of application file
@@ -11,12 +11,15 @@
 
   `$ ./availability.rb 12:40`
 
-##### Requirements fulfilled:
+##### Requirements fulfilled
 - [x] Book required time where available
 - [x] Book next available where choice not possible
 - [x] Appointment time printed on booking
 - [x] Patients cannot book appointments outside of hours
 - [x] Slots cannot be booked twice.
+
+##### Future concerns
+Restructure how information is passed into program. Primarily, refactor out into a 'input' class, reducing future technical debt where other information may be added to request.
 
 -----
 
