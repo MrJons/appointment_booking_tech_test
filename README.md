@@ -6,7 +6,7 @@
 ##### To run program
 - Navigate to root of program directory.
 - run bundle
-- uncomment code at bottom of application file
+- uncomment code at bottom of availability.rb file
 - run applications file with chosen time as below..
 
   `$ ./availability.rb 12:40`

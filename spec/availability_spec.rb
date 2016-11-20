@@ -1,6 +1,5 @@
 require 'availability'
 require 'time'
-require 'json'
 
 #comment out Class/method calls at bottom of availability.rb file to avoid errors
 
