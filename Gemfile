@@ -2,5 +2,6 @@
 source "https://rubygems.org"
 
 gem 'rspec'
+gem 'rake'
 gem 'json'
 gem 'timecop'
