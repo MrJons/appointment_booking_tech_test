@@ -4,4 +4,4 @@ source "https://rubygems.org"
 gem 'rspec'
 gem 'rake'
 gem 'json'
-gem 'timecop'
+gem 'coveralls', require: false

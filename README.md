@@ -1,6 +1,7 @@
 # Babylon health tech test
 
 [![Build Status](https://travis-ci.org/MrJons/babylon_health_tech_test.svg?branch=master)](https://travis-ci.org/MrJons/babylon_health_tech_test)
+[![Coverage Status](https://coveralls.io/repos/github/MrJons/babylon_health_tech_test/badge.svg?branch=master)](https://coveralls.io/github/MrJons/babylon_health_tech_test)
 
 ##### To run program:
 - Navigate to root of program directory.
@@ -15,7 +16,7 @@
 - [x] Book next available where choice not possible
 - [x] Appointment time printed on booking
 - [x] Patients cannot book appointments outside of hours
-- [ ] Slots cannot be booked twice (currently works in IRB, however not as required).
+- [x] Slots cannot be booked twice.
 
 -----
 

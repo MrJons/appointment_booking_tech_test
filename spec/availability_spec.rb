@@ -1,11 +1,16 @@
 require 'availability'
 require 'time'
+require 'json'
 
 #comment out Class/method calls at bottom of availability.rb file to avoid errors
 
 describe Availability do
 
   let(:availability) {described_class.new('json_test_file.json')}
+
+  after(:each) do
+    IO.copy_stream('json_test_file_2.json', 'json_test_file.json')
+  end
 
   it "flags error if requested time is outside specified hours" do
     try_again = "Please select time within the hours of 08:00 and 15:00"
@@ -35,5 +40,4 @@ describe Availability do
     availability.book_slot(request_one)
     expect(availability.book_slot(request_two)).to eq("08:30")
   end
-
 end

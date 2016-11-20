@@ -8,6 +8,7 @@ class Availability
   LAST_APPOINTMENT = "15:00"
 
   def initialize(slots = 'availability_slots.json')
+    @json = slots
     @slots = Json_parse.new(slots)
     @appointment_list = @slots.data_hash['availability_slots']
     @confirmed_time = nil
@@ -16,6 +17,7 @@ class Availability
   def book_slot(time)
     check_hours(time)
     find_slot(time)
+    @slots.write_json(@json, @slots.data_hash)
     feedback
   end
 
