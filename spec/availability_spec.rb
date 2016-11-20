@@ -8,7 +8,7 @@ describe Availability do
   let(:availability) {described_class.new('json_test_file.json')}
 
   it "flags error if requested time is outside specified hours" do
-    try_again = "Please select time within the hours of 8am and 3pm"
+    try_again = "Please select time within the hours of 08:00 and 15:00"
     request = Time.parse("16:00")
     expect{availability.book_slot(request)}.to raise_error(try_again)
   end
@@ -27,6 +27,13 @@ describe Availability do
     no_apts = "Sorry, there are no appointments on or after your chosen time"
     request = Time.parse("09:00")
     expect{availability.book_slot(request)}.to raise_error(no_apts)
+  end
+
+  it "cannot book same appointment twice" do
+    request_one = Time.parse("08:00")
+    request_two = Time.parse("08:00")
+    availability.book_slot(request_one)
+    expect(availability.book_slot(request_two)).to eq("08:30")
   end
 
 end

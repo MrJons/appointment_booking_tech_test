@@ -1,4 +1,4 @@
-#Checks time availability
+#Books appointment
 require_relative 'json_parse'
 require 'time'
 
@@ -9,6 +9,7 @@ class Availability
 
   def initialize(slots = 'availability_slots.json')
     @slots = Json_parse.new(slots)
+    @appointment_list = @slots.data_hash['availability_slots']
     @confirmed_time = nil
   end
 
@@ -22,17 +23,22 @@ class Availability
 
   def check_hours(time)
     if (time < time_parse(FIRST_APPOINTMENT) || time > time_parse(LAST_APPOINTMENT))
-      fail "Please select time within the hours of 8am and 3pm"
+      fail "Please select time within the hours of #{FIRST_APPOINTMENT} and #{LAST_APPOINTMENT}"
     end
   end
 
   def find_slot(time)
-    @slots.data_hash['availability_slots'].each do |appointment|
+    @appointment_list.each do |appointment|
       if time <= time_parse(appointment['time'])
         @confirmed_time = time_parse(appointment['time'])
+        remove_slot_from_availability(appointment)
         break
       end
     end
+  end
+
+  def remove_slot_from_availability(appointment)
+    @appointment_list.delete(appointment)
   end
 
   def feedback
