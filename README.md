@@ -1,4 +1,22 @@
-# Babylon Ruby Test
+# Babylon health tech test
+
+##### To run program:
+- Navigate to root of program directory.
+- run bundle
+- run applications file with chosen time as below..
+
+  `$ ./availability.rb 12:40`
+
+##### Requirements fulfilled:
+- [x] Book required time where available
+- [x] Book next available where choice not possible
+- [x] Appointment time printed on booking
+- [x] Patients cannot book appointments outside of hours
+- [ ] Slots cannot be booked twice (currently works in IRB, however not as required).
+
+-----
+
+# Brief
 Your task is to create an app that will allow patients to book appointments with a doctor, using the dataset provided.
 
 ## Requirements

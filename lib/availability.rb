@@ -59,5 +59,5 @@ class Availability
 
 end
 
-a = Availability.new()
-puts a.book_slot(Time.parse(ARGV[0].to_s))
+# a = Availability.new()
+# puts a.book_slot(Time.parse(ARGV[0].to_s))
