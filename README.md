@@ -1,8 +1,11 @@
 # Babylon health tech test
 
+[![Build Status](https://travis-ci.org/MrJons/babylon_health_tech_test.svg?branch=master)](https://travis-ci.org/MrJons/babylon_health_tech_test)
+
 ##### To run program:
 - Navigate to root of program directory.
 - run bundle
+- uncomment code at bottom of application file
 - run applications file with chosen time as below..
 
   `$ ./availability.rb 12:40`
