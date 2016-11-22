@@ -5,10 +5,10 @@ require 'time'
 
 describe Availability do
 
-  let(:availability) {described_class.new('json_test_file.json')}
+  let(:availability) {described_class.new('spec/json_test_file.json')}
 
   after(:each) do
-    IO.copy_stream('json_test_file_2.json', 'json_test_file.json')
+    IO.copy_stream('spec/json_test_file_2.json', 'spec/json_test_file.json')
   end
 
   it "flags error if requested time is outside specified hours" do

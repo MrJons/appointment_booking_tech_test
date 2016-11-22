@@ -7,7 +7,7 @@ class Availability
   FIRST_APPOINTMENT = "08:00"
   LAST_APPOINTMENT = "15:00"
 
-  def initialize(slots = 'availability_slots.json')
+  def initialize(slots = 'public/availability_slots.json')
     @json = slots
     @slots = Json_parse.new(slots)
     @appointment_list = @slots.data_hash['availability_slots']

@@ -1,9 +1,10 @@
-# Babylon health tech test
+# Appointment booking tech test
 
 [![Build Status](https://travis-ci.org/MrJons/babylon_health_tech_test.svg?branch=master)](https://travis-ci.org/MrJons/babylon_health_tech_test)
 [![Coverage Status](https://coveralls.io/repos/github/MrJons/babylon_health_tech_test/badge.svg?branch=master)](https://coveralls.io/github/MrJons/babylon_health_tech_test)
 
 ##### To run program
+- Clone repo
 - Navigate to root of program directory.
 - run bundle
 - uncomment code at bottom of availability.rb file

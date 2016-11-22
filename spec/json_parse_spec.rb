@@ -3,10 +3,10 @@ require 'json_parse'
 
 describe Json_parse do
 
-  let(:json_parse) {described_class.new('json_test_file.json')}
+  let(:json_parse) {described_class.new('spec/json_test_file.json')}
 
   after(:each) do
-    IO.copy_stream('json_test_file_2.json', 'json_test_file.json')
+    IO.copy_stream('spec/json_test_file_2.json', 'spec/json_test_file.json')
   end
 
   parsed_slots = {"availability_slots"=>[{"time" => "08:00:00", "slot_size" => 10,
